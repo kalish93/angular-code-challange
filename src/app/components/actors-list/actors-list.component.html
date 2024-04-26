@@ -1,0 +1,21 @@
+<div class="container">
+  <h1 class="title">Actors</h1>
+  <ng-container *ngIf="loading; else loadedContent">
+    <p>Loading...</p>
+  </ng-container>
+
+  <ng-template #loadedContent>
+  <div class="actors-list">
+    <div class="card" *ngFor="let actor of actors">
+      <h1>{{actor.name}}</h1>
+      <p>Height: {{actor.height}}</p>
+      <p>Birth Year: {{actor.birth_year}}</p>
+      <button (click)="navigateToDetail(actor)" class="detail-btn">View Detail</button>
+    </div>
+  </div>
+  </ng-template>
+  <div class="nav-btns">
+    <button [disabled]="previous == null" (click)="previousPage()" class="nav-btn">Previous</button>
+    <button [disabled]="next == null" (click)="nextPage()" class="nav-btn">Next</button>
+  </div>
+</div>

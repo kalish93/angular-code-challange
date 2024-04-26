@@ -1,0 +1,29 @@
+
+.wrapper {
+  background-image: url('../../../assets/starwars.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 0px solid white;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1px;
+  border-radius: 10px;
+  box-shadow: 0 2px 7px 2px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  color: white;
+  background: linear-gradient(to bottom right, rgba(18, 39, 59, 0.3), rgba(51, 107, 148, 0.3), rgba(236, 131, 144, 0.3));
+}
+
+.actor-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

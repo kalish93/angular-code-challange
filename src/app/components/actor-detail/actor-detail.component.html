@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <div class="actor-detail">
+    <ng-container *ngIf="loading; else loadedContent">
+      <p>Loading...</p>
+    </ng-container>
+
+    <ng-template #loadedContent class="container">
+      <div class="card">
+        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+      <h1>{{ actor.name }}</h1>
+      <p><strong>Height:</strong> {{ actor.height }}</p>
+      <p><strong>Mass:</strong> {{ actor.mass }}</p>
+      <p><strong>Hair Color:</strong> {{ actor.hair_color }}</p>
+      <p><strong>Skin Color:</strong> {{ actor.skin_color }}</p>
+      <p><strong>Eye Color:</strong> {{ actor.eye_color }}</p>
+      <p><strong>Birth Year:</strong> {{ actor.birth_year }}</p>
+      <p><strong>Gender:</strong> {{ actor.gender }}</p>
+    </div>
+    </ng-template>
+  </div>
+</div>
+
